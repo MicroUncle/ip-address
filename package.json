@@ -1,5 +1,5 @@
 {
-  "name": "ip-address",
+  "name": "node-ip-address",
   "version": "0.0.1",
   "description": "node服务器获取ip地址附加在req",
   "main": "index.js",
