@@ -4,7 +4,8 @@
   "description": "node服务器获取ip地址附加在req",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "node src/server.js",
+    "test": "mocha test/add.test.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,9 @@
   },
   "homepage": "https://github.com/MicroUncle/ip-address#readme",
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^5.9.0",
-    "eslint-config-google": "^0.11.0"
+    "eslint-config-google": "^0.11.0",
+    "mocha": "^5.2.0"
   }
 }
