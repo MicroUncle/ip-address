@@ -2,10 +2,12 @@
  * @Author: wanxiaodong
  * @Date: 2018-11-14 14:33:00
  * @Last Modified by: wanxiaodong
- * @Last Modified time: 2018-11-14 16:05:41
+ * @Last Modified time: 2018-11-14 16:16:07
  */
 module.exports = function (req, res, next) {
-    const ip = req.socket;
-    console.log(ip);
+    let ip = req.connection.remoteAddress;
+    ip = ip.replace(/[^\d.]/igm, '');
+    req.ipAddress = ip;
     next && next()
+    return ip
 }
