@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "node src/server.js",
-    "test": "mocha test/add.test.js"
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
