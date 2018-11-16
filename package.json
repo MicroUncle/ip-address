@@ -1,6 +1,6 @@
 {
   "name": "node-ip-address",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "node服务器获取ip地址附加在req",
   "main": "index.js",
   "scripts": {
