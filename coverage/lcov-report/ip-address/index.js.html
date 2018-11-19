@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">12.5% </span>
+        <span class="strong">81.25% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>2/16</span>
+        <span class='fraction'>13/16</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/12</span>
+        <span class='fraction'>6/12</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/1</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">12.5% </span>
+        <span class="strong">81.25% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>2/16</span>
+        <span class='fraction'>13/16</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -88,34 +88,34 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
  * @Author: wanxiaodong
@@ -124,35 +124,35 @@
  * @Last Modified time: 2018-11-18 14:49:02
  */
 const keyName = 'address'
-module.exports = <span class="fstat-no" title="function not covered" >function (req, res, next) {</span>
-<span class="cstat-no" title="statement not covered" >    const result = {</span>
+module.exports = function (req, res, next) {
+    const result = {
       ip: '',
       source: ''
     }
-<span class="cstat-no" title="statement not covered" >    try {</span>
-<span class="cstat-no" title="statement not covered" >      let _req = req;</span>
-<span class="cstat-no" title="statement not covered" >      if (req.req) {</span>
+    try {
+      let _req = req;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (req.req) {
         // koa
 <span class="cstat-no" title="statement not covered" >        _req = req.req;</span>
       }
       // console.log(req)
-<span class="cstat-no" title="statement not covered" >      result.source = _req.headers['x-forwarded-for'] ||</span>
+      result.source = _req.headers['x-forwarded-for'] ||
         _req.connection.remoteAddress ||
-        _req.socket.remoteAddress ||
-        _req.connection.socket.remoteAddress;
+<span class="branch-2 cbranch-no" title="branch not covered" >        _req.socket.remoteAddress </span>||
+<span class="branch-3 cbranch-no" title="branch not covered" >        _req.connection.socket.remoteAddress;</span>
       // x-forwarded-for 可能存在多个代理
-<span class="cstat-no" title="statement not covered" >      result.source = result.source.split(',')[0];</span>
-<span class="cstat-no" title="statement not covered" >      result.ip = result.source.replace(/[^\d.]/igm, '');</span>
-<span class="cstat-no" title="statement not covered" >      if (req.append) {</span>
+      result.source = result.source.split(',')[0];
+      result.ip = result.source.replace(/[^\d.]/igm, '');
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (req.append) {
 <span class="cstat-no" title="statement not covered" >        req.append(keyName, result)</span>
       } else {
-<span class="cstat-no" title="statement not covered" >        req[keyName] = result;</span>
+        req[keyName] = result;
       }
     } catch(e) {
 <span class="cstat-no" title="statement not covered" >      console.log(e.message)</span>
     }
-<span class="cstat-no" title="statement not covered" >    process.env.NODE_ENV &amp;&amp; console.log('ip address is:', result)</span>
-<span class="cstat-no" title="statement not covered" >    next &amp;&amp; next()</span>
+    process.env.NODE_ENV &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >console.log('ip address is:', result)</span>
+    next &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >next()</span>
 }
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -160,7 +160,7 @@ module.exports = <span class="fstat-no" title="function not covered" >function (
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Nov 19 2018 15:16:04 GMT+0800 (中国标准时间)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Nov 19 2018 15:21:46 GMT+0800 (中国标准时间)
 </div>
 </div>
 <script src="../prettify.js"></script>
