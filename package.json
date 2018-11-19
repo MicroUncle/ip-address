@@ -16,7 +16,7 @@
     "ip"
   ],
   "author": "wanxiaodong",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MicroUncle/ip-address/issues"
   },
