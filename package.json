@@ -1,10 +1,9 @@
 {
   "name": "node-ip-address",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "node服务器获取ip地址附加在req",
   "main": "index.js",
   "scripts": {
-    "server": "node src/server.js",
     "test": "mocha --reporter list",
     "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha"
   },
