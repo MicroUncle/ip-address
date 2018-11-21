@@ -1,3 +1,12 @@
+## 0.0.6 (2018-11-21)
+
+
+### Bug Fixes
+
+* 复制链接错误 ([0baebf3](https://github.com/MicroUncle/ip-address/commit/0baebf3))
+
+
+
 ## <small>0.0.5 (2018-11-20)</small>
 
 * test:  版本号升级发 ([92dd037](https://github.com/MicroUncle/ip-address/commit/92dd037))
